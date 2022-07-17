@@ -4,8 +4,6 @@
 
 namespace PhpSentryProtobuf\MySentry;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -86,14 +84,14 @@ class Event extends \Google\Protobuf\Internal\Message
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $messageParams
      *     @type string $environment
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $fingerprint
-     *     @type array<\MySentry\Exception>|\Google\Protobuf\Internal\RepeatedField $exceptions
+     *     @type array<\PhpSentryProtobuf\MySentry\Exception>|\Google\Protobuf\Internal\RepeatedField $exceptions
      *     @type string $sdkIdentifier
      *     @type string $sdkVersion
      *     @type string $type
      * }
      */
     public function __construct($data = NULL) {
-        \GPBMetadata\Event::initOnce();
+        \PhpSentryProtobuf\GPBMetadata\Event::initOnce();
         parent::__construct($data);
     }
 
@@ -179,7 +177,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function setLevel($var)
     {
-        GPBUtil::checkEnum($var, \MySentry\Event\Severity::class);
+        GPBUtil::checkEnum($var, \PhpSentryProtobuf\MySentry\Event\Severity::class);
         $this->level = $var;
 
         return $this;
@@ -328,12 +326,12 @@ class Event extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .mySentry.Exception exceptions = 11;</code>
-     * @param array<\MySentry\Exception>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\PhpSentryProtobuf\MySentry\Exception>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setExceptions($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \MySentry\Exception::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \PhpSentryProtobuf\MySentry\Exception::class);
         $this->exceptions = $arr;
 
         return $this;

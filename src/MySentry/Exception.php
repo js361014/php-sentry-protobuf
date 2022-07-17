@@ -4,8 +4,6 @@
 
 namespace PhpSentryProtobuf\MySentry;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -38,12 +36,12 @@ class Exception extends \Google\Protobuf\Internal\Message
      *
      *     @type string $type
      *     @type string $value
-     *     @type \MySentry\Stacktrace $stacktrace
-     *     @type \MySentry\ExceptionMechanism $mechanism
+     *     @type \PhpSentryProtobuf\MySentry\Stacktrace $stacktrace
+     *     @type \PhpSentryProtobuf\MySentry\ExceptionMechanism $mechanism
      * }
      */
     public function __construct($data = NULL) {
-        \GPBMetadata\Event::initOnce();
+        \PhpSentryProtobuf\GPBMetadata\Event::initOnce();
         parent::__construct($data);
     }
 
@@ -93,7 +91,7 @@ class Exception extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.mySentry.Stacktrace stacktrace = 3;</code>
-     * @return \MySentry\Stacktrace|null
+     * @return \PhpSentryProtobuf\MySentry\Stacktrace|null
      */
     public function getStacktrace()
     {
@@ -112,12 +110,12 @@ class Exception extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.mySentry.Stacktrace stacktrace = 3;</code>
-     * @param \MySentry\Stacktrace $var
+     * @param \PhpSentryProtobuf\MySentry\Stacktrace $var
      * @return $this
      */
     public function setStacktrace($var)
     {
-        GPBUtil::checkMessage($var, \MySentry\Stacktrace::class);
+        GPBUtil::checkMessage($var, \PhpSentryProtobuf\MySentry\Stacktrace::class);
         $this->stacktrace = $var;
 
         return $this;
@@ -125,7 +123,7 @@ class Exception extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.mySentry.ExceptionMechanism mechanism = 4;</code>
-     * @return \MySentry\ExceptionMechanism|null
+     * @return \PhpSentryProtobuf\MySentry\ExceptionMechanism|null
      */
     public function getMechanism()
     {
@@ -144,12 +142,12 @@ class Exception extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.mySentry.ExceptionMechanism mechanism = 4;</code>
-     * @param \MySentry\ExceptionMechanism $var
+     * @param \PhpSentryProtobuf\MySentry\ExceptionMechanism $var
      * @return $this
      */
     public function setMechanism($var)
     {
-        GPBUtil::checkMessage($var, \MySentry\ExceptionMechanism::class);
+        GPBUtil::checkMessage($var, \PhpSentryProtobuf\MySentry\ExceptionMechanism::class);
         $this->mechanism = $var;
 
         return $this;

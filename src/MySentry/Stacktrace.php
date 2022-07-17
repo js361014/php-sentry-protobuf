@@ -4,8 +4,6 @@
 
 namespace PhpSentryProtobuf\MySentry;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -24,11 +22,11 @@ class Stacktrace extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\MySentry\Frame>|\Google\Protobuf\Internal\RepeatedField $frames
+     *     @type array<\PhpSentryProtobuf\MySentry\Frame>|\Google\Protobuf\Internal\RepeatedField $frames
      * }
      */
     public function __construct($data = NULL) {
-        \GPBMetadata\Event::initOnce();
+        \PhpSentryProtobuf\GPBMetadata\Event::initOnce();
         parent::__construct($data);
     }
 
@@ -43,12 +41,12 @@ class Stacktrace extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .mySentry.Frame frames = 1;</code>
-     * @param array<\MySentry\Frame>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\PhpSentryProtobuf\MySentry\Frame>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFrames($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \MySentry\Frame::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \PhpSentryProtobuf\MySentry\Frame::class);
         $this->frames = $arr;
 
         return $this;

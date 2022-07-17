@@ -4,8 +4,6 @@
 
 namespace PhpSentryProtobuf\MySentry;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -53,7 +51,7 @@ class Frame extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \GPBMetadata\Event::initOnce();
+        \PhpSentryProtobuf\GPBMetadata\Event::initOnce();
         parent::__construct($data);
     }
 
