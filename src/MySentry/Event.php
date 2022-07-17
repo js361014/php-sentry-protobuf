@@ -4,10 +4,12 @@
 
 namespace PhpSentryProtobuf\MySentry;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>mySentry.Event</code>
+ * Generated from protobuf message <code>PhpSentryProtobuf.MySentry.Event</code>
  */
 class Event extends \Google\Protobuf\Internal\Message
 {
@@ -24,7 +26,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     protected $startTimestamp = 0.0;
     /**
-     * Generated from protobuf field <code>.mySentry.Event.Severity level = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Event.Severity level = 4;</code>
      */
     protected $level = 0;
     /**
@@ -52,7 +54,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     private $fingerprint;
     /**
-     * Generated from protobuf field <code>repeated .mySentry.Exception exceptions = 11;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 11;</code>
      */
     private $exceptions;
     /**
@@ -162,7 +164,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mySentry.Event.Severity level = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Event.Severity level = 4;</code>
      * @return int
      */
     public function getLevel()
@@ -171,7 +173,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mySentry.Event.Severity level = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Event.Severity level = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -316,7 +318,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .mySentry.Exception exceptions = 11;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 11;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getExceptions()
@@ -325,7 +327,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .mySentry.Exception exceptions = 11;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 11;</code>
      * @param array<\PhpSentryProtobuf\MySentry\Exception>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

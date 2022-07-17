@@ -4,10 +4,12 @@
 
 namespace PhpSentryProtobuf\MySentry;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>mySentry.ExceptionMechanism</code>
+ * Generated from protobuf message <code>PhpSentryProtobuf.MySentry.ExceptionMechanism</code>
  */
 class ExceptionMechanism extends \Google\Protobuf\Internal\Message
 {

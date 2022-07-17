@@ -4,15 +4,17 @@
 
 namespace PhpSentryProtobuf\MySentry;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>mySentry.Stacktrace</code>
+ * Generated from protobuf message <code>PhpSentryProtobuf.MySentry.Stacktrace</code>
  */
 class Stacktrace extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>repeated .mySentry.Frame frames = 1;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Frame frames = 1;</code>
      */
     private $frames;
 
@@ -31,7 +33,7 @@ class Stacktrace extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .mySentry.Frame frames = 1;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Frame frames = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFrames()
@@ -40,7 +42,7 @@ class Stacktrace extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .mySentry.Frame frames = 1;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Frame frames = 1;</code>
      * @param array<\PhpSentryProtobuf\MySentry\Frame>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

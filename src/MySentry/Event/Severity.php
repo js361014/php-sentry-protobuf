@@ -7,7 +7,7 @@ namespace PhpSentryProtobuf\MySentry\Event;
 use UnexpectedValueException;
 
 /**
- * Protobuf type <code>mySentry.Event.Severity</code>
+ * Protobuf type <code>PhpSentryProtobuf.MySentry.Event.Severity</code>
  */
 class Severity
 {
@@ -62,5 +62,5 @@ class Severity
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Severity::class, \MySentry\Event_Severity::class);
+class_alias(Severity::class, \PhpSentryProtobuf\MySentry\Event_Severity::class);
 

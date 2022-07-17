@@ -4,10 +4,12 @@
 
 namespace PhpSentryProtobuf\MySentry;
 
+use Google\Protobuf\Internal\GPBType;
+use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>mySentry.Exception</code>
+ * Generated from protobuf message <code>PhpSentryProtobuf.MySentry.Exception</code>
  */
 class Exception extends \Google\Protobuf\Internal\Message
 {
@@ -20,11 +22,11 @@ class Exception extends \Google\Protobuf\Internal\Message
      */
     protected $value = '';
     /**
-     * Generated from protobuf field <code>.mySentry.Stacktrace stacktrace = 3;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Stacktrace stacktrace = 3;</code>
      */
     protected $stacktrace = null;
     /**
-     * Generated from protobuf field <code>.mySentry.ExceptionMechanism mechanism = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.ExceptionMechanism mechanism = 4;</code>
      */
     protected $mechanism = null;
 
@@ -90,7 +92,7 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mySentry.Stacktrace stacktrace = 3;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Stacktrace stacktrace = 3;</code>
      * @return \PhpSentryProtobuf\MySentry\Stacktrace|null
      */
     public function getStacktrace()
@@ -109,7 +111,7 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mySentry.Stacktrace stacktrace = 3;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Stacktrace stacktrace = 3;</code>
      * @param \PhpSentryProtobuf\MySentry\Stacktrace $var
      * @return $this
      */
@@ -122,7 +124,7 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mySentry.ExceptionMechanism mechanism = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.ExceptionMechanism mechanism = 4;</code>
      * @return \PhpSentryProtobuf\MySentry\ExceptionMechanism|null
      */
     public function getMechanism()
@@ -141,7 +143,7 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mySentry.ExceptionMechanism mechanism = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.ExceptionMechanism mechanism = 4;</code>
      * @param \PhpSentryProtobuf\MySentry\ExceptionMechanism $var
      * @return $this
      */
