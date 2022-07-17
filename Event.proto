@@ -1,0 +1,52 @@
+syntax = "proto3";
+package PhpSentryProtobuf.MySentry;
+
+message Event {
+  enum Severity {
+    debug = 0;
+    info = 1;
+    warning = 2;
+    error = 3;
+    fatal = 4;
+  }
+
+  string eventId = 1;
+  float timestamp = 2;
+  float startTimestamp = 3;
+  Severity level = 4;
+  string release = 5;
+  string message = 6;
+  string messageFormatted = 7;
+  repeated string messageParams = 8;
+  string environment = 9;
+  repeated string fingerprint = 10;
+  repeated Exception exceptions = 11;
+  string sdkIdentifier = 12;
+  string sdkVersion = 13;
+  string type = 14;
+}
+
+message Exception {
+  string type = 1;
+  string value = 2;
+  Stacktrace stacktrace = 3;
+  ExceptionMechanism mechanism = 4;
+}
+
+message Stacktrace {
+  repeated Frame frames = 1;
+}
+
+message Frame {
+  string functionName = 1;
+  string rawFunctionName = 2;
+  string file = 3;
+  string absoluteFilePath = 4;
+  int32 line = 5;
+  bool inApp = 6;
+}
+
+message ExceptionMechanism {
+  string type = 1;
+  bool handled = 2;
+}

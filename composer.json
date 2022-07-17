@@ -1,0 +1,17 @@
+{
+    "name": "js361014/php-sentry-protobuf",
+    "description": "PHP Sentry Protobuf",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "psr-4": {
+            "PhpSentryProtobuf\\": "src"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "sentry/sentry": "^3.6",
+        "php-http/curl-client": "^2.2",
+        "google/protobuf": "^3.21"
+    }
+}
