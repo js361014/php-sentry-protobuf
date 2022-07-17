@@ -1,5 +1,7 @@
 syntax = "proto3";
 package PhpSentryProtobuf.MySentry;
+option php_namespace = "PhpSentryProtobuf\\MySentry";
+option php_metadata_namespace = "PhpSentryProtobuf\\Metadata";
 
 message Event {
   enum Severity {

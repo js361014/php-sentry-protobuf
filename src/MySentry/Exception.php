@@ -43,7 +43,7 @@ class Exception extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \PhpSentryProtobuf\GPBMetadata\Event::initOnce();
+        \PhpSentryProtobuf\Metadata\Event::initOnce();
         parent::__construct($data);
     }
 
