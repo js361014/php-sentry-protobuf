@@ -22,10 +22,35 @@ message Event {
   repeated string messageParams = 8;
   string environment = 9;
   repeated string fingerprint = 10;
-  repeated Exception exceptions = 11;
-  string sdkIdentifier = 12;
-  string sdkVersion = 13;
-  string type = 14;
+  repeated Breadcrumb breadcrumbs = 11;
+  repeated Exception exceptions = 12;
+  string sdkIdentifier = 13;
+  string sdkVersion = 14;
+  string type = 15;
+}
+
+message Breadcrumb {
+  enum Type {
+    type_default = 0;
+    type_http = 1;
+    type_user = 2;
+    type_navigation = 3;
+    type_error = 4;
+  }
+
+  enum Level {
+    level_debug = 0;
+    level_info = 1;
+    level_warning = 2;
+    level_error = 3;
+    level_fatal = 4;
+  }
+
+  string category = 1;
+  Type type = 2;
+  string message = 3;
+  Level level = 4;
+  float timestamp = 5;
 }
 
 message Exception {
