@@ -36,6 +36,11 @@ message Breadcrumb {
     type_user = 2;
     type_navigation = 3;
     type_error = 4;
+    type_debug = 5;
+    type_info = 6;
+    type_query = 7;
+    type_system = 8;
+    type_session = 9;
   }
 
   enum Level {
