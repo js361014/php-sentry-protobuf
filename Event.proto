@@ -75,7 +75,10 @@ message Frame {
   string file = 3;
   string absoluteFilePath = 4;
   int32 line = 5;
-  bool inApp = 6;
+  repeated string preContext = 6;
+  string contextLine = 7;
+  repeated string postContext = 8;
+  bool inApp = 9;
 }
 
 message ExceptionMechanism {

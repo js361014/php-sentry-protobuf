@@ -34,7 +34,19 @@ class Frame extends \Google\Protobuf\Internal\Message
      */
     protected $line = 0;
     /**
-     * Generated from protobuf field <code>bool inApp = 6;</code>
+     * Generated from protobuf field <code>repeated string preContext = 6;</code>
+     */
+    private $preContext;
+    /**
+     * Generated from protobuf field <code>string contextLine = 7;</code>
+     */
+    protected $contextLine = '';
+    /**
+     * Generated from protobuf field <code>repeated string postContext = 8;</code>
+     */
+    private $postContext;
+    /**
+     * Generated from protobuf field <code>bool inApp = 9;</code>
      */
     protected $inApp = false;
 
@@ -49,6 +61,9 @@ class Frame extends \Google\Protobuf\Internal\Message
      *     @type string $file
      *     @type string $absoluteFilePath
      *     @type int $line
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $preContext
+     *     @type string $contextLine
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $postContext
      *     @type bool $inApp
      * }
      */
@@ -168,7 +183,73 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool inApp = 6;</code>
+     * Generated from protobuf field <code>repeated string preContext = 6;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getPreContext()
+    {
+        return $this->preContext;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string preContext = 6;</code>
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setPreContext($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->preContext = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string contextLine = 7;</code>
+     * @return string
+     */
+    public function getContextLine()
+    {
+        return $this->contextLine;
+    }
+
+    /**
+     * Generated from protobuf field <code>string contextLine = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setContextLine($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->contextLine = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string postContext = 8;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getPostContext()
+    {
+        return $this->postContext;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string postContext = 8;</code>
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setPostContext($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->postContext = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool inApp = 9;</code>
      * @return bool
      */
     public function getInApp()
@@ -177,7 +258,7 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool inApp = 6;</code>
+     * Generated from protobuf field <code>bool inApp = 9;</code>
      * @param bool $var
      * @return $this
      */
