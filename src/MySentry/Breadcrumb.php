@@ -22,15 +22,19 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
      */
     protected $type = 0;
     /**
-     * Generated from protobuf field <code>string message = 3;</code>
+     * Generated from protobuf field <code>map<string, string> data = 3;</code>
+     */
+    private $data;
+    /**
+     * Generated from protobuf field <code>string message = 4;</code>
      */
     protected $message = '';
     /**
-     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 5;</code>
      */
     protected $level = 0;
     /**
-     * Generated from protobuf field <code>float timestamp = 5;</code>
+     * Generated from protobuf field <code>float timestamp = 6;</code>
      */
     protected $timestamp = 0.0;
 
@@ -42,6 +46,7 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
      *
      *     @type string $category
      *     @type int $type
+     *     @type array|\Google\Protobuf\Internal\MapField $data
      *     @type string $message
      *     @type int $level
      *     @type float $timestamp
@@ -97,7 +102,29 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string message = 3;</code>
+     * Generated from protobuf field <code>map<string, string> data = 3;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<string, string> data = 3;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setData($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->data = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string message = 4;</code>
      * @return string
      */
     public function getMessage()
@@ -106,7 +133,7 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string message = 3;</code>
+     * Generated from protobuf field <code>string message = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -119,7 +146,7 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 5;</code>
      * @return int
      */
     public function getLevel()
@@ -128,7 +155,7 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 4;</code>
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 5;</code>
      * @param int $var
      * @return $this
      */
@@ -141,7 +168,7 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>float timestamp = 5;</code>
+     * Generated from protobuf field <code>float timestamp = 6;</code>
      * @return float
      */
     public function getTimestamp()
@@ -150,7 +177,7 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>float timestamp = 5;</code>
+     * Generated from protobuf field <code>float timestamp = 6;</code>
      * @param float $var
      * @return $this
      */

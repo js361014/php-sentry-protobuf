@@ -54,9 +54,10 @@ message Breadcrumb {
 
   string category = 1;
   Type type = 2;
-  string message = 3;
-  Level level = 4;
-  float timestamp = 5;
+  map<string, string> data = 3;
+  string message = 4;
+  Level level = 5;
+  float timestamp = 6;
 }
 
 message Exception {
