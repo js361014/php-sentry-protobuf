@@ -30,47 +30,51 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     protected $level = 0;
     /**
-     * Generated from protobuf field <code>string release = 5;</code>
+     * Generated from protobuf field <code>string transaction = 5;</code>
+     */
+    protected $transaction = '';
+    /**
+     * Generated from protobuf field <code>string release = 6;</code>
      */
     protected $release = '';
     /**
-     * Generated from protobuf field <code>string message = 6;</code>
+     * Generated from protobuf field <code>string message = 7;</code>
      */
     protected $message = '';
     /**
-     * Generated from protobuf field <code>string messageFormatted = 7;</code>
+     * Generated from protobuf field <code>string messageFormatted = 8;</code>
      */
     protected $messageFormatted = '';
     /**
-     * Generated from protobuf field <code>repeated string messageParams = 8;</code>
+     * Generated from protobuf field <code>repeated string messageParams = 9;</code>
      */
     private $messageParams;
     /**
-     * Generated from protobuf field <code>string environment = 9;</code>
+     * Generated from protobuf field <code>string environment = 10;</code>
      */
     protected $environment = '';
     /**
-     * Generated from protobuf field <code>repeated string fingerprint = 10;</code>
+     * Generated from protobuf field <code>repeated string fingerprint = 11;</code>
      */
     private $fingerprint;
     /**
-     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Breadcrumb breadcrumbs = 11;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Breadcrumb breadcrumbs = 12;</code>
      */
     private $breadcrumbs;
     /**
-     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 12;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 13;</code>
      */
     private $exceptions;
     /**
-     * Generated from protobuf field <code>string sdkIdentifier = 13;</code>
+     * Generated from protobuf field <code>string sdkIdentifier = 14;</code>
      */
     protected $sdkIdentifier = '';
     /**
-     * Generated from protobuf field <code>string sdkVersion = 14;</code>
+     * Generated from protobuf field <code>string sdkVersion = 15;</code>
      */
     protected $sdkVersion = '';
     /**
-     * Generated from protobuf field <code>string type = 15;</code>
+     * Generated from protobuf field <code>string type = 16;</code>
      */
     protected $type = '';
 
@@ -84,6 +88,7 @@ class Event extends \Google\Protobuf\Internal\Message
      *     @type float $timestamp
      *     @type float $startTimestamp
      *     @type int $level
+     *     @type string $transaction
      *     @type string $release
      *     @type string $message
      *     @type string $messageFormatted
@@ -191,7 +196,29 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string release = 5;</code>
+     * Generated from protobuf field <code>string transaction = 5;</code>
+     * @return string
+     */
+    public function getTransaction()
+    {
+        return $this->transaction;
+    }
+
+    /**
+     * Generated from protobuf field <code>string transaction = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTransaction($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->transaction = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string release = 6;</code>
      * @return string
      */
     public function getRelease()
@@ -200,7 +227,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string release = 5;</code>
+     * Generated from protobuf field <code>string release = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -213,7 +240,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string message = 6;</code>
+     * Generated from protobuf field <code>string message = 7;</code>
      * @return string
      */
     public function getMessage()
@@ -222,7 +249,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string message = 6;</code>
+     * Generated from protobuf field <code>string message = 7;</code>
      * @param string $var
      * @return $this
      */
@@ -235,7 +262,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string messageFormatted = 7;</code>
+     * Generated from protobuf field <code>string messageFormatted = 8;</code>
      * @return string
      */
     public function getMessageFormatted()
@@ -244,7 +271,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string messageFormatted = 7;</code>
+     * Generated from protobuf field <code>string messageFormatted = 8;</code>
      * @param string $var
      * @return $this
      */
@@ -257,7 +284,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string messageParams = 8;</code>
+     * Generated from protobuf field <code>repeated string messageParams = 9;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMessageParams()
@@ -266,7 +293,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string messageParams = 8;</code>
+     * Generated from protobuf field <code>repeated string messageParams = 9;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -279,7 +306,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string environment = 9;</code>
+     * Generated from protobuf field <code>string environment = 10;</code>
      * @return string
      */
     public function getEnvironment()
@@ -288,7 +315,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string environment = 9;</code>
+     * Generated from protobuf field <code>string environment = 10;</code>
      * @param string $var
      * @return $this
      */
@@ -301,7 +328,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string fingerprint = 10;</code>
+     * Generated from protobuf field <code>repeated string fingerprint = 11;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFingerprint()
@@ -310,7 +337,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string fingerprint = 10;</code>
+     * Generated from protobuf field <code>repeated string fingerprint = 11;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -323,7 +350,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Breadcrumb breadcrumbs = 11;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Breadcrumb breadcrumbs = 12;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBreadcrumbs()
@@ -332,7 +359,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Breadcrumb breadcrumbs = 11;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Breadcrumb breadcrumbs = 12;</code>
      * @param array<\PhpSentryProtobuf\MySentry\Breadcrumb>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -345,7 +372,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 12;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 13;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getExceptions()
@@ -354,7 +381,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 12;</code>
+     * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Exception exceptions = 13;</code>
      * @param array<\PhpSentryProtobuf\MySentry\Exception>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -367,7 +394,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string sdkIdentifier = 13;</code>
+     * Generated from protobuf field <code>string sdkIdentifier = 14;</code>
      * @return string
      */
     public function getSdkIdentifier()
@@ -376,7 +403,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string sdkIdentifier = 13;</code>
+     * Generated from protobuf field <code>string sdkIdentifier = 14;</code>
      * @param string $var
      * @return $this
      */
@@ -389,7 +416,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string sdkVersion = 14;</code>
+     * Generated from protobuf field <code>string sdkVersion = 15;</code>
      * @return string
      */
     public function getSdkVersion()
@@ -398,7 +425,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string sdkVersion = 14;</code>
+     * Generated from protobuf field <code>string sdkVersion = 15;</code>
      * @param string $var
      * @return $this
      */
@@ -411,7 +438,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string type = 15;</code>
+     * Generated from protobuf field <code>string type = 16;</code>
      * @return string
      */
     public function getType()
@@ -420,7 +447,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string type = 15;</code>
+     * Generated from protobuf field <code>string type = 16;</code>
      * @param string $var
      * @return $this
      */

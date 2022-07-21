@@ -16,17 +16,18 @@ message Event {
   float timestamp = 2;
   float startTimestamp = 3;
   Severity level = 4;
-  string release = 5;
-  string message = 6;
-  string messageFormatted = 7;
-  repeated string messageParams = 8;
-  string environment = 9;
-  repeated string fingerprint = 10;
-  repeated Breadcrumb breadcrumbs = 11;
-  repeated Exception exceptions = 12;
-  string sdkIdentifier = 13;
-  string sdkVersion = 14;
-  string type = 15;
+  string transaction = 5;
+  string release = 6;
+  string message = 7;
+  string messageFormatted = 8;
+  repeated string messageParams = 9;
+  string environment = 10;
+  repeated string fingerprint = 11;
+  repeated Breadcrumb breadcrumbs = 12;
+  repeated Exception exceptions = 13;
+  string sdkIdentifier = 14;
+  string sdkVersion = 15;
+  string type = 16;
 }
 
 message Breadcrumb {
