@@ -22,12 +22,13 @@ message Event {
   string messageFormatted = 8;
   repeated string messageParams = 9;
   string environment = 10;
-  repeated string fingerprint = 11;
-  repeated Breadcrumb breadcrumbs = 12;
-  repeated Exception exceptions = 13;
-  string sdkIdentifier = 14;
-  string sdkVersion = 15;
-  string type = 16;
+  map<string, string> tags = 11;
+  repeated string fingerprint = 12;
+  repeated Breadcrumb breadcrumbs = 13;
+  repeated Exception exceptions = 14;
+  string sdkIdentifier = 15;
+  string sdkVersion = 16;
+  string type = 17;
 }
 
 message Breadcrumb {
