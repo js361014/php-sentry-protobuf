@@ -59,6 +59,7 @@ message Span {
 message Data {
   string stringData = 1;
   map<string, string> mapData = 2;
+  repeated string arrayData = 3;
 }
 
 message Context {

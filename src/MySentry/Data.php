@@ -21,6 +21,10 @@ class Data extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
      */
     private $mapData;
+    /**
+     * Generated from protobuf field <code>repeated string arrayData = 3;</code>
+     */
+    private $arrayData;
 
     /**
      * Constructor.
@@ -30,6 +34,7 @@ class Data extends \Google\Protobuf\Internal\Message
      *
      *     @type string $stringData
      *     @type array|\Google\Protobuf\Internal\MapField $mapData
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $arrayData
      * }
      */
     public function __construct($data = NULL) {
@@ -77,6 +82,28 @@ class Data extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->mapData = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string arrayData = 3;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getArrayData()
+    {
+        return $this->arrayData;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string arrayData = 3;</code>
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setArrayData($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->arrayData = $arr;
 
         return $this;
     }
