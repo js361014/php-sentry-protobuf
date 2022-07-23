@@ -5,94 +5,130 @@ option php_metadata_namespace = "PhpSentryProtobuf\\Metadata";
 
 message Event {
   enum Severity {
-    debug = 0;
-    info = 1;
-    warning = 2;
-    error = 3;
-    fatal = 4;
+    severity_debug = 0; //debug severity level
+    severity_info = 1; //info severity level
+    severity_warning = 2; //warning severity level
+    severity_error = 3; //error severity level
+    severity_fatal = 4; //fatal severity level
   }
 
-  string eventId = 1;
-  float timestamp = 2;
-  float startTimestamp = 3;
-  Severity level = 4;
-  string transaction = 5;
-  string release = 6;
-  string message = 7;
-  string messageFormatted = 8;
-  repeated string messageParams = 9;
-  string environment = 10;
-  map<string, string> tags = 11;
-  User user = 12;
-  repeated string fingerprint = 13;
-  repeated Breadcrumb breadcrumbs = 14;
-  repeated Exception exceptions = 15;
-  string sdkIdentifier = 16;
-  string sdkVersion = 17;
-  string type = 18;
+  string eventId = 1; //The ID
+  float timestamp = 2; //The date and time of when this event was generated
+  //This property is used if it's a Transaction event together with timestamp it's the duration of the transaction.
+  float startTimestamp = 3; //The date and time of when this event was generated
+  Severity level = 4; //The severity of this event
+  string logger = 5; //The name of the logger which created the record
+  string transaction = 6; //The name of the transaction (or culprit) which caused this exception
+  string serverName = 7; //The name of the server (e.g. the host name)
+  string release = 8; //The release of the program
+  string message = 9; //The error message
+  string messageFormatted = 10; //The formatted error message
+  repeated string messageParams = 11; //The parameters to use to format the message
+  string environment = 12; //The environment where this event generated (e.g. production)
+  map<string, string> modules = 13; //A list of relevant modules and their versions
+  map<string, string> request = 14; //The request data
+  map<string, string> tags = 15; //A list of tags associated to this event
+  OsContext osContext = 16; //The server OS context data
+  RuntimeContext runtimeContext = 17; //The runtime context data
+  User user = 18; //The user context data
+  map<string, Context> contexts = 19; //An arbitrary mapping of additional contexts associated to this event
+  map<string, string> extra = 20; //An arbitrary mapping of additional metadata
+  repeated string fingerprint = 21; //An array of strings used to dictate the deduplication of this event
+  repeated Breadcrumb breadcrumbs = 22; //The associated breadcrumbs
+  repeated Span spans = 23; //The array of spans if it's a transaction
+  repeated Exception exceptions = 24; //The exceptions
+  string sdkIdentifier = 25; //The Sentry SDK identifier
+  string sdkVersion = 26; //The Sentry SDK version
+  string type = 27; //The type of the Event
+}
+
+message Span {
+  string spanId = 1; //Span ID
+  string traceId = 2; //Trace ID
+  string description = 3; //Description of the span
+  string op = 4; //Operation of the span
+  string status = 5; //Completion status of the span
+  string parentSpanId = 6; //ID of the parent span
+  bool sampled = 7; //Has the sample decision been made?
+  map<string, string> tags = 8; //A List of tags associated to this span
+  map<string, string> data = 9; //An arbitrary mapping of additional metadata
+  float startTimestamp = 10; //Timestamp in seconds (epoch time) indicating when the span started
+  float endTimestamp = 11; //Timestamp in seconds (epoch time) indicating when the span ended
+}
+
+message Context {
+  map<string, string> data = 1; //Context data
+}
+
+message RuntimeContext {
+  string name = 1; //The name of the runtime
+  string version = 2; //The version of the runtime
+}
+
+message OsContext {
+  string name = 1; //The name of the operating system
+  string version = 2; //The version of the operating system
+  string build = 3; //The internal build revision of the operating system
+  string kernelVersion = 4; //An independent kernel version string
 }
 
 message User {
-  string id = 1;
-  string email = 2;
-  string ipAddress = 3;
-  string username = 4;
+  string id = 1; //The unique ID of the user
+  string email = 2; //The email address of the user
+  string ipAddress = 3; //The IP of the user
+  string username = 4; //The username of the user
+  map<string, string> metadata = 5; //Additional data
 }
 
 message Breadcrumb {
   enum Type {
-    type_default = 0;
-    type_http = 1;
-    type_user = 2;
-    type_navigation = 3;
-    type_error = 4;
-    type_debug = 5;
-    type_info = 6;
-    type_query = 7;
-    type_system = 8;
-    type_session = 9;
+    type_default = 0; //default breadcrumb type
+    type_http = 1; //http breadcrumb type
+    type_user = 2; //user breadcrumb type
+    type_navigation = 3; //navigation breadcrumb type
+    type_error = 4; //error breadcrumb type
   }
 
   enum Level {
-    level_debug = 0;
-    level_info = 1;
-    level_warning = 2;
-    level_error = 3;
-    level_fatal = 4;
+    level_debug = 0; //debug level for a breadcrumb
+    level_info = 1; //info level for a breadcrumb
+    level_warning = 2; //warning level for a breadcrumb
+    level_error = 3; //error level for a breadcrumb
+    level_fatal = 4; //fatal level for a breadcrumb
   }
 
-  string category = 1;
-  Type type = 2;
-  map<string, string> data = 3;
-  string message = 4;
-  Level level = 5;
-  float timestamp = 6;
+  string category = 1; //The category of the breadcrumb
+  Type type = 2; //The type of breadcrumb
+  string message = 3; //The message of the breadcrumb
+  Level level = 4; //The level of the breadcrumb
+  map<string, string> metadata = 5; //The meta data of the breadcrumb
+  float timestamp = 6; //The timestamp of the breadcrumb
 }
 
 message Exception {
-  string type = 1;
-  string value = 2;
-  Stacktrace stacktrace = 3;
-  ExceptionMechanism mechanism = 4;
+  string type = 1; //The type of exception, e.g. RuntimeException
+  string value = 2; //The value of the exception
+  Stacktrace stacktrace = 3; //The stack trace of exception
+  ExceptionMechanism mechanism = 4; //The mechanism that created this exception
 }
 
 message Stacktrace {
-  repeated Frame frames = 1;
+  repeated Frame frames = 1; //The frames that compose the stacktrace
 }
 
 message Frame {
-  string functionName = 1;
-  string rawFunctionName = 2;
-  string file = 3;
-  string absoluteFilePath = 4;
-  int32 line = 5;
-  repeated string preContext = 6;
-  string contextLine = 7;
-  repeated string postContext = 8;
-  bool inApp = 9;
+  string functionName = 1; //The name of the function being called
+  string rawFunctionName = 2; //The original function name, if the function name is shortened or demangled
+  string file = 3; //The file where the frame originated
+  string absoluteFilePath = 4; //The absolute path to the source file
+  int32 line = 5; //The line at which the frame originated
+  repeated string preContext = 6; //A list of source code lines before the one where the frame originated
+  string contextLine = 7; //The source code written at the line number of the file that originated this frame
+  repeated string postContext = 8; //A list of source code lines after the one where the frame originated
+  bool inApp = 9; //Flag telling whether the frame is related to the execution of the relevant code in this stacktrace
 }
 
 message ExceptionMechanism {
-  string type = 1;
-  bool handled = 2;
+  string type = 1; //Unique identifier of this mechanism determining rendering and processing of the mechanism data
+  bool handled = 2; //Flag indicating whether the exception has been handled by the user (e.g. via try..catch)
 }

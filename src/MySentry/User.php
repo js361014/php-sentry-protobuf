@@ -14,21 +14,35 @@ use Google\Protobuf\Internal\GPBUtil;
 class User extends \Google\Protobuf\Internal\Message
 {
     /**
+     *The unique ID of the user
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
+     *The email address of the user
+     *
      * Generated from protobuf field <code>string email = 2;</code>
      */
     protected $email = '';
     /**
+     *The IP of the user
+     *
      * Generated from protobuf field <code>string ipAddress = 3;</code>
      */
     protected $ipAddress = '';
     /**
+     *The username of the user
+     *
      * Generated from protobuf field <code>string username = 4;</code>
      */
     protected $username = '';
+    /**
+     *Additional data
+     *
+     * Generated from protobuf field <code>map<string, string> metadata = 5;</code>
+     */
+    private $metadata;
 
     /**
      * Constructor.
@@ -37,9 +51,15 @@ class User extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
+     *          The unique ID of the user
      *     @type string $email
+     *          The email address of the user
      *     @type string $ipAddress
+     *          The IP of the user
      *     @type string $username
+     *          The username of the user
+     *     @type array|\Google\Protobuf\Internal\MapField $metadata
+     *          Additional data
      * }
      */
     public function __construct($data = NULL) {
@@ -48,6 +68,8 @@ class User extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The unique ID of the user
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
      */
@@ -57,6 +79,8 @@ class User extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The unique ID of the user
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
      * @return $this
@@ -70,6 +94,8 @@ class User extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The email address of the user
+     *
      * Generated from protobuf field <code>string email = 2;</code>
      * @return string
      */
@@ -79,6 +105,8 @@ class User extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The email address of the user
+     *
      * Generated from protobuf field <code>string email = 2;</code>
      * @param string $var
      * @return $this
@@ -92,6 +120,8 @@ class User extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The IP of the user
+     *
      * Generated from protobuf field <code>string ipAddress = 3;</code>
      * @return string
      */
@@ -101,6 +131,8 @@ class User extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The IP of the user
+     *
      * Generated from protobuf field <code>string ipAddress = 3;</code>
      * @param string $var
      * @return $this
@@ -114,6 +146,8 @@ class User extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The username of the user
+     *
      * Generated from protobuf field <code>string username = 4;</code>
      * @return string
      */
@@ -123,6 +157,8 @@ class User extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The username of the user
+     *
      * Generated from protobuf field <code>string username = 4;</code>
      * @param string $var
      * @return $this
@@ -131,6 +167,32 @@ class User extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->username = $var;
+
+        return $this;
+    }
+
+    /**
+     *Additional data
+     *
+     * Generated from protobuf field <code>map<string, string> metadata = 5;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getMetadata()
+    {
+        return $this->metadata;
+    }
+
+    /**
+     *Additional data
+     *
+     * Generated from protobuf field <code>map<string, string> metadata = 5;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setMetadata($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->metadata = $arr;
 
         return $this;
     }

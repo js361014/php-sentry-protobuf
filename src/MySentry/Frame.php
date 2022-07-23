@@ -14,38 +14,56 @@ use Google\Protobuf\Internal\GPBUtil;
 class Frame extends \Google\Protobuf\Internal\Message
 {
     /**
+     *The name of the function being called
+     *
      * Generated from protobuf field <code>string functionName = 1;</code>
      */
     protected $functionName = '';
     /**
+     *The original function name, if the function name is shortened or demangled
+     *
      * Generated from protobuf field <code>string rawFunctionName = 2;</code>
      */
     protected $rawFunctionName = '';
     /**
+     *The file where the frame originated
+     *
      * Generated from protobuf field <code>string file = 3;</code>
      */
     protected $file = '';
     /**
+     *The absolute path to the source file
+     *
      * Generated from protobuf field <code>string absoluteFilePath = 4;</code>
      */
     protected $absoluteFilePath = '';
     /**
+     *The line at which the frame originated
+     *
      * Generated from protobuf field <code>int32 line = 5;</code>
      */
     protected $line = 0;
     /**
+     *A list of source code lines before the one where the frame originated
+     *
      * Generated from protobuf field <code>repeated string preContext = 6;</code>
      */
     private $preContext;
     /**
+     *The source code written at the line number of the file that originated this frame
+     *
      * Generated from protobuf field <code>string contextLine = 7;</code>
      */
     protected $contextLine = '';
     /**
+     *A list of source code lines after the one where the frame originated
+     *
      * Generated from protobuf field <code>repeated string postContext = 8;</code>
      */
     private $postContext;
     /**
+     *Flag telling whether the frame is related to the execution of the relevant code in this stacktrace
+     *
      * Generated from protobuf field <code>bool inApp = 9;</code>
      */
     protected $inApp = false;
@@ -57,14 +75,23 @@ class Frame extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $functionName
+     *          The name of the function being called
      *     @type string $rawFunctionName
+     *          The original function name, if the function name is shortened or demangled
      *     @type string $file
+     *          The file where the frame originated
      *     @type string $absoluteFilePath
+     *          The absolute path to the source file
      *     @type int $line
+     *          The line at which the frame originated
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $preContext
+     *          A list of source code lines before the one where the frame originated
      *     @type string $contextLine
+     *          The source code written at the line number of the file that originated this frame
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $postContext
+     *          A list of source code lines after the one where the frame originated
      *     @type bool $inApp
+     *          Flag telling whether the frame is related to the execution of the relevant code in this stacktrace
      * }
      */
     public function __construct($data = NULL) {
@@ -73,6 +100,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The name of the function being called
+     *
      * Generated from protobuf field <code>string functionName = 1;</code>
      * @return string
      */
@@ -82,6 +111,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The name of the function being called
+     *
      * Generated from protobuf field <code>string functionName = 1;</code>
      * @param string $var
      * @return $this
@@ -95,6 +126,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The original function name, if the function name is shortened or demangled
+     *
      * Generated from protobuf field <code>string rawFunctionName = 2;</code>
      * @return string
      */
@@ -104,6 +137,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The original function name, if the function name is shortened or demangled
+     *
      * Generated from protobuf field <code>string rawFunctionName = 2;</code>
      * @param string $var
      * @return $this
@@ -117,6 +152,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The file where the frame originated
+     *
      * Generated from protobuf field <code>string file = 3;</code>
      * @return string
      */
@@ -126,6 +163,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The file where the frame originated
+     *
      * Generated from protobuf field <code>string file = 3;</code>
      * @param string $var
      * @return $this
@@ -139,6 +178,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The absolute path to the source file
+     *
      * Generated from protobuf field <code>string absoluteFilePath = 4;</code>
      * @return string
      */
@@ -148,6 +189,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The absolute path to the source file
+     *
      * Generated from protobuf field <code>string absoluteFilePath = 4;</code>
      * @param string $var
      * @return $this
@@ -161,6 +204,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The line at which the frame originated
+     *
      * Generated from protobuf field <code>int32 line = 5;</code>
      * @return int
      */
@@ -170,6 +215,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The line at which the frame originated
+     *
      * Generated from protobuf field <code>int32 line = 5;</code>
      * @param int $var
      * @return $this
@@ -183,6 +230,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *A list of source code lines before the one where the frame originated
+     *
      * Generated from protobuf field <code>repeated string preContext = 6;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -192,6 +241,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *A list of source code lines before the one where the frame originated
+     *
      * Generated from protobuf field <code>repeated string preContext = 6;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
@@ -205,6 +256,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The source code written at the line number of the file that originated this frame
+     *
      * Generated from protobuf field <code>string contextLine = 7;</code>
      * @return string
      */
@@ -214,6 +267,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The source code written at the line number of the file that originated this frame
+     *
      * Generated from protobuf field <code>string contextLine = 7;</code>
      * @param string $var
      * @return $this
@@ -227,6 +282,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *A list of source code lines after the one where the frame originated
+     *
      * Generated from protobuf field <code>repeated string postContext = 8;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -236,6 +293,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *A list of source code lines after the one where the frame originated
+     *
      * Generated from protobuf field <code>repeated string postContext = 8;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
@@ -249,6 +308,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Flag telling whether the frame is related to the execution of the relevant code in this stacktrace
+     *
      * Generated from protobuf field <code>bool inApp = 9;</code>
      * @return bool
      */
@@ -258,6 +319,8 @@ class Frame extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Flag telling whether the frame is related to the execution of the relevant code in this stacktrace
+     *
      * Generated from protobuf field <code>bool inApp = 9;</code>
      * @param bool $var
      * @return $this

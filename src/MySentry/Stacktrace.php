@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class Stacktrace extends \Google\Protobuf\Internal\Message
 {
     /**
+     *The frames that compose the stacktrace
+     *
      * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Frame frames = 1;</code>
      */
     private $frames;
@@ -25,6 +27,7 @@ class Stacktrace extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<\PhpSentryProtobuf\MySentry\Frame>|\Google\Protobuf\Internal\RepeatedField $frames
+     *          The frames that compose the stacktrace
      * }
      */
     public function __construct($data = NULL) {
@@ -33,6 +36,8 @@ class Stacktrace extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The frames that compose the stacktrace
+     *
      * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Frame frames = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -42,6 +47,8 @@ class Stacktrace extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The frames that compose the stacktrace
+     *
      * Generated from protobuf field <code>repeated .PhpSentryProtobuf.MySentry.Frame frames = 1;</code>
      * @param array<\PhpSentryProtobuf\MySentry\Frame>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this

@@ -12,45 +12,35 @@ use UnexpectedValueException;
 class Type
 {
     /**
+     *default breadcrumb type
+     *
      * Generated from protobuf enum <code>type_default = 0;</code>
      */
     const type_default = 0;
     /**
+     *http breadcrumb type
+     *
      * Generated from protobuf enum <code>type_http = 1;</code>
      */
     const type_http = 1;
     /**
+     *user breadcrumb type
+     *
      * Generated from protobuf enum <code>type_user = 2;</code>
      */
     const type_user = 2;
     /**
+     *navigation breadcrumb type
+     *
      * Generated from protobuf enum <code>type_navigation = 3;</code>
      */
     const type_navigation = 3;
     /**
+     *error breadcrumb type
+     *
      * Generated from protobuf enum <code>type_error = 4;</code>
      */
     const type_error = 4;
-    /**
-     * Generated from protobuf enum <code>type_debug = 5;</code>
-     */
-    const type_debug = 5;
-    /**
-     * Generated from protobuf enum <code>type_info = 6;</code>
-     */
-    const type_info = 6;
-    /**
-     * Generated from protobuf enum <code>type_query = 7;</code>
-     */
-    const type_query = 7;
-    /**
-     * Generated from protobuf enum <code>type_system = 8;</code>
-     */
-    const type_system = 8;
-    /**
-     * Generated from protobuf enum <code>type_session = 9;</code>
-     */
-    const type_session = 9;
 
     private static $valueToName = [
         self::type_default => 'type_default',
@@ -58,11 +48,6 @@ class Type
         self::type_user => 'type_user',
         self::type_navigation => 'type_navigation',
         self::type_error => 'type_error',
-        self::type_debug => 'type_debug',
-        self::type_info => 'type_info',
-        self::type_query => 'type_query',
-        self::type_system => 'type_system',
-        self::type_session => 'type_session',
     ];
 
     public static function name($value)

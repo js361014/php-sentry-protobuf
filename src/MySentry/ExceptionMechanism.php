@@ -14,10 +14,14 @@ use Google\Protobuf\Internal\GPBUtil;
 class ExceptionMechanism extends \Google\Protobuf\Internal\Message
 {
     /**
+     *Unique identifier of this mechanism determining rendering and processing of the mechanism data
+     *
      * Generated from protobuf field <code>string type = 1;</code>
      */
     protected $type = '';
     /**
+     *Flag indicating whether the exception has been handled by the user (e.g. via try..catch)
+     *
      * Generated from protobuf field <code>bool handled = 2;</code>
      */
     protected $handled = false;
@@ -29,7 +33,9 @@ class ExceptionMechanism extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $type
+     *          Unique identifier of this mechanism determining rendering and processing of the mechanism data
      *     @type bool $handled
+     *          Flag indicating whether the exception has been handled by the user (e.g. via try..catch)
      * }
      */
     public function __construct($data = NULL) {
@@ -38,6 +44,8 @@ class ExceptionMechanism extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Unique identifier of this mechanism determining rendering and processing of the mechanism data
+     *
      * Generated from protobuf field <code>string type = 1;</code>
      * @return string
      */
@@ -47,6 +55,8 @@ class ExceptionMechanism extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Unique identifier of this mechanism determining rendering and processing of the mechanism data
+     *
      * Generated from protobuf field <code>string type = 1;</code>
      * @param string $var
      * @return $this
@@ -60,6 +70,8 @@ class ExceptionMechanism extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Flag indicating whether the exception has been handled by the user (e.g. via try..catch)
+     *
      * Generated from protobuf field <code>bool handled = 2;</code>
      * @return bool
      */
@@ -69,6 +81,8 @@ class ExceptionMechanism extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Flag indicating whether the exception has been handled by the user (e.g. via try..catch)
+     *
      * Generated from protobuf field <code>bool handled = 2;</code>
      * @param bool $var
      * @return $this

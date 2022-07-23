@@ -14,18 +14,26 @@ use Google\Protobuf\Internal\GPBUtil;
 class Exception extends \Google\Protobuf\Internal\Message
 {
     /**
+     *The type of exception, e.g. RuntimeException
+     *
      * Generated from protobuf field <code>string type = 1;</code>
      */
     protected $type = '';
     /**
+     *The value of the exception
+     *
      * Generated from protobuf field <code>string value = 2;</code>
      */
     protected $value = '';
     /**
+     *The stack trace of exception
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Stacktrace stacktrace = 3;</code>
      */
     protected $stacktrace = null;
     /**
+     *The mechanism that created this exception
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.ExceptionMechanism mechanism = 4;</code>
      */
     protected $mechanism = null;
@@ -37,9 +45,13 @@ class Exception extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $type
+     *          The type of exception, e.g. RuntimeException
      *     @type string $value
+     *          The value of the exception
      *     @type \PhpSentryProtobuf\MySentry\Stacktrace $stacktrace
+     *          The stack trace of exception
      *     @type \PhpSentryProtobuf\MySentry\ExceptionMechanism $mechanism
+     *          The mechanism that created this exception
      * }
      */
     public function __construct($data = NULL) {
@@ -48,6 +60,8 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The type of exception, e.g. RuntimeException
+     *
      * Generated from protobuf field <code>string type = 1;</code>
      * @return string
      */
@@ -57,6 +71,8 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The type of exception, e.g. RuntimeException
+     *
      * Generated from protobuf field <code>string type = 1;</code>
      * @param string $var
      * @return $this
@@ -70,6 +86,8 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The value of the exception
+     *
      * Generated from protobuf field <code>string value = 2;</code>
      * @return string
      */
@@ -79,6 +97,8 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The value of the exception
+     *
      * Generated from protobuf field <code>string value = 2;</code>
      * @param string $var
      * @return $this
@@ -92,6 +112,8 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The stack trace of exception
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Stacktrace stacktrace = 3;</code>
      * @return \PhpSentryProtobuf\MySentry\Stacktrace|null
      */
@@ -111,6 +133,8 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The stack trace of exception
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Stacktrace stacktrace = 3;</code>
      * @param \PhpSentryProtobuf\MySentry\Stacktrace $var
      * @return $this
@@ -124,6 +148,8 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The mechanism that created this exception
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.ExceptionMechanism mechanism = 4;</code>
      * @return \PhpSentryProtobuf\MySentry\ExceptionMechanism|null
      */
@@ -143,6 +169,8 @@ class Exception extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The mechanism that created this exception
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.ExceptionMechanism mechanism = 4;</code>
      * @param \PhpSentryProtobuf\MySentry\ExceptionMechanism $var
      * @return $this

@@ -14,26 +14,38 @@ use Google\Protobuf\Internal\GPBUtil;
 class Breadcrumb extends \Google\Protobuf\Internal\Message
 {
     /**
+     *The category of the breadcrumb
+     *
      * Generated from protobuf field <code>string category = 1;</code>
      */
     protected $category = '';
     /**
+     *The type of breadcrumb
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Type type = 2;</code>
      */
     protected $type = 0;
     /**
-     * Generated from protobuf field <code>map<string, string> data = 3;</code>
-     */
-    private $data;
-    /**
-     * Generated from protobuf field <code>string message = 4;</code>
+     *The message of the breadcrumb
+     *
+     * Generated from protobuf field <code>string message = 3;</code>
      */
     protected $message = '';
     /**
-     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 5;</code>
+     *The level of the breadcrumb
+     *
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 4;</code>
      */
     protected $level = 0;
     /**
+     *The meta data of the breadcrumb
+     *
+     * Generated from protobuf field <code>map<string, string> metadata = 5;</code>
+     */
+    private $metadata;
+    /**
+     *The timestamp of the breadcrumb
+     *
      * Generated from protobuf field <code>float timestamp = 6;</code>
      */
     protected $timestamp = 0.0;
@@ -45,11 +57,17 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $category
+     *          The category of the breadcrumb
      *     @type int $type
-     *     @type array|\Google\Protobuf\Internal\MapField $data
+     *          The type of breadcrumb
      *     @type string $message
+     *          The message of the breadcrumb
      *     @type int $level
+     *          The level of the breadcrumb
+     *     @type array|\Google\Protobuf\Internal\MapField $metadata
+     *          The meta data of the breadcrumb
      *     @type float $timestamp
+     *          The timestamp of the breadcrumb
      * }
      */
     public function __construct($data = NULL) {
@@ -58,6 +76,8 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The category of the breadcrumb
+     *
      * Generated from protobuf field <code>string category = 1;</code>
      * @return string
      */
@@ -67,6 +87,8 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The category of the breadcrumb
+     *
      * Generated from protobuf field <code>string category = 1;</code>
      * @param string $var
      * @return $this
@@ -80,6 +102,8 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The type of breadcrumb
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Type type = 2;</code>
      * @return int
      */
@@ -89,6 +113,8 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The type of breadcrumb
+     *
      * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Type type = 2;</code>
      * @param int $var
      * @return $this
@@ -102,29 +128,9 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<string, string> data = 3;</code>
-     * @return \Google\Protobuf\Internal\MapField
-     */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    /**
-     * Generated from protobuf field <code>map<string, string> data = 3;</code>
-     * @param array|\Google\Protobuf\Internal\MapField $var
-     * @return $this
-     */
-    public function setData($var)
-    {
-        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
-        $this->data = $arr;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string message = 4;</code>
+     *The message of the breadcrumb
+     *
+     * Generated from protobuf field <code>string message = 3;</code>
      * @return string
      */
     public function getMessage()
@@ -133,7 +139,9 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string message = 4;</code>
+     *The message of the breadcrumb
+     *
+     * Generated from protobuf field <code>string message = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -146,7 +154,9 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 5;</code>
+     *The level of the breadcrumb
+     *
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 4;</code>
      * @return int
      */
     public function getLevel()
@@ -155,7 +165,9 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 5;</code>
+     *The level of the breadcrumb
+     *
+     * Generated from protobuf field <code>.PhpSentryProtobuf.MySentry.Breadcrumb.Level level = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -168,6 +180,34 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The meta data of the breadcrumb
+     *
+     * Generated from protobuf field <code>map<string, string> metadata = 5;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getMetadata()
+    {
+        return $this->metadata;
+    }
+
+    /**
+     *The meta data of the breadcrumb
+     *
+     * Generated from protobuf field <code>map<string, string> metadata = 5;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setMetadata($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->metadata = $arr;
+
+        return $this;
+    }
+
+    /**
+     *The timestamp of the breadcrumb
+     *
      * Generated from protobuf field <code>float timestamp = 6;</code>
      * @return float
      */
@@ -177,6 +217,8 @@ class Breadcrumb extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *The timestamp of the breadcrumb
+     *
      * Generated from protobuf field <code>float timestamp = 6;</code>
      * @param float $var
      * @return $this

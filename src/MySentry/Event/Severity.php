@@ -12,32 +12,42 @@ use UnexpectedValueException;
 class Severity
 {
     /**
-     * Generated from protobuf enum <code>debug = 0;</code>
+     *debug severity level
+     *
+     * Generated from protobuf enum <code>severity_debug = 0;</code>
      */
-    const debug = 0;
+    const severity_debug = 0;
     /**
-     * Generated from protobuf enum <code>info = 1;</code>
+     *info severity level
+     *
+     * Generated from protobuf enum <code>severity_info = 1;</code>
      */
-    const info = 1;
+    const severity_info = 1;
     /**
-     * Generated from protobuf enum <code>warning = 2;</code>
+     *warning severity level
+     *
+     * Generated from protobuf enum <code>severity_warning = 2;</code>
      */
-    const warning = 2;
+    const severity_warning = 2;
     /**
-     * Generated from protobuf enum <code>error = 3;</code>
+     *error severity level
+     *
+     * Generated from protobuf enum <code>severity_error = 3;</code>
      */
-    const error = 3;
+    const severity_error = 3;
     /**
-     * Generated from protobuf enum <code>fatal = 4;</code>
+     *fatal severity level
+     *
+     * Generated from protobuf enum <code>severity_fatal = 4;</code>
      */
-    const fatal = 4;
+    const severity_fatal = 4;
 
     private static $valueToName = [
-        self::debug => 'debug',
-        self::info => 'info',
-        self::warning => 'warning',
-        self::error => 'error',
-        self::fatal => 'fatal',
+        self::severity_debug => 'severity_debug',
+        self::severity_info => 'severity_info',
+        self::severity_warning => 'severity_warning',
+        self::severity_error => 'severity_error',
+        self::severity_fatal => 'severity_fatal',
     ];
 
     public static function name($value)

@@ -12,22 +12,32 @@ use UnexpectedValueException;
 class Level
 {
     /**
+     *debug level for a breadcrumb
+     *
      * Generated from protobuf enum <code>level_debug = 0;</code>
      */
     const level_debug = 0;
     /**
+     *info level for a breadcrumb
+     *
      * Generated from protobuf enum <code>level_info = 1;</code>
      */
     const level_info = 1;
     /**
+     *warning level for a breadcrumb
+     *
      * Generated from protobuf enum <code>level_warning = 2;</code>
      */
     const level_warning = 2;
     /**
+     *error level for a breadcrumb
+     *
      * Generated from protobuf enum <code>level_error = 3;</code>
      */
     const level_error = 3;
     /**
+     *fatal level for a breadcrumb
+     *
      * Generated from protobuf enum <code>level_fatal = 4;</code>
      */
     const level_fatal = 4;
