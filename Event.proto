@@ -87,6 +87,7 @@ message Breadcrumb {
     type_user = 2; //user breadcrumb type
     type_navigation = 3; //navigation breadcrumb type
     type_error = 4; //error breadcrumb type
+    type_session = 5; //session breadcrumb type
   }
 
   enum Level {

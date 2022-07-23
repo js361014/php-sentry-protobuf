@@ -41,6 +41,12 @@ class Type
      * Generated from protobuf enum <code>type_error = 4;</code>
      */
     const type_error = 4;
+    /**
+     *session breadcrumb type
+     *
+     * Generated from protobuf enum <code>type_session = 5;</code>
+     */
+    const type_session = 5;
 
     private static $valueToName = [
         self::type_default => 'type_default',
@@ -48,6 +54,7 @@ class Type
         self::type_user => 'type_user',
         self::type_navigation => 'type_navigation',
         self::type_error => 'type_error',
+        self::type_session => 'type_session',
     ];
 
     public static function name($value)
