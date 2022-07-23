@@ -14,13 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Context extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string stringData = 1;</code>
+     * Generated from protobuf field <code>map<string, .PhpSentryProtobuf.MySentry.Data> data = 1;</code>
      */
-    protected $stringData = '';
-    /**
-     * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
-     */
-    private $mapData;
+    private $data;
 
     /**
      * Constructor.
@@ -28,8 +24,7 @@ class Context extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $stringData
-     *     @type array|\Google\Protobuf\Internal\MapField $mapData
+     *     @type array|\Google\Protobuf\Internal\MapField $data
      * }
      */
     public function __construct($data = NULL) {
@@ -38,45 +33,23 @@ class Context extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string stringData = 1;</code>
-     * @return string
-     */
-    public function getStringData()
-    {
-        return $this->stringData;
-    }
-
-    /**
-     * Generated from protobuf field <code>string stringData = 1;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setStringData($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->stringData = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
+     * Generated from protobuf field <code>map<string, .PhpSentryProtobuf.MySentry.Data> data = 1;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
-    public function getMapData()
+    public function getData()
     {
-        return $this->mapData;
+        return $this->data;
     }
 
     /**
-     * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
+     * Generated from protobuf field <code>map<string, .PhpSentryProtobuf.MySentry.Data> data = 1;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setMapData($var)
+    public function setData($var)
     {
-        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
-        $this->mapData = $arr;
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \PhpSentryProtobuf\MySentry\Data::class);
+        $this->data = $arr;
 
         return $this;
     }

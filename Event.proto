@@ -56,9 +56,13 @@ message Span {
   float endTimestamp = 11; //Timestamp in seconds (epoch time) indicating when the span ended
 }
 
-message Context {
+message Data {
   string stringData = 1;
   map<string, string> mapData = 2;
+}
+
+message Context {
+  map<string, Data> data = 1;
 }
 
 message RuntimeContext {
