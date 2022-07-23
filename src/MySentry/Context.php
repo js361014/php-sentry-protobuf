@@ -14,11 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class Context extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Context data
-     *
-     * Generated from protobuf field <code>map<string, string> data = 1;</code>
+     * Generated from protobuf field <code>string stringData = 1;</code>
      */
-    private $data;
+    protected $stringData = '';
+    /**
+     * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
+     */
+    private $mapData;
 
     /**
      * Constructor.
@@ -26,8 +28,8 @@ class Context extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array|\Google\Protobuf\Internal\MapField $data
-     *          Context data
+     *     @type string $stringData
+     *     @type array|\Google\Protobuf\Internal\MapField $mapData
      * }
      */
     public function __construct($data = NULL) {
@@ -36,27 +38,45 @@ class Context extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Context data
-     *
-     * Generated from protobuf field <code>map<string, string> data = 1;</code>
-     * @return \Google\Protobuf\Internal\MapField
+     * Generated from protobuf field <code>string stringData = 1;</code>
+     * @return string
      */
-    public function getData()
+    public function getStringData()
     {
-        return $this->data;
+        return $this->stringData;
     }
 
     /**
-     *Context data
-     *
-     * Generated from protobuf field <code>map<string, string> data = 1;</code>
+     * Generated from protobuf field <code>string stringData = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStringData($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->stringData = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getMapData()
+    {
+        return $this->mapData;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setData($var)
+    public function setMapData($var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
-        $this->data = $arr;
+        $this->mapData = $arr;
 
         return $this;
     }

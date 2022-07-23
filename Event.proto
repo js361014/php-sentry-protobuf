@@ -57,7 +57,8 @@ message Span {
 }
 
 message Context {
-  map<string, string> data = 1; //Context data
+  string stringData = 1;
+  map<string, string> mapData = 2;
 }
 
 message RuntimeContext {
