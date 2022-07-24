@@ -14,14 +14,20 @@ use Google\Protobuf\Internal\GPBUtil;
 class Data extends \Google\Protobuf\Internal\Message
 {
     /**
+     *String data
+     *
      * Generated from protobuf field <code>string stringData = 1;</code>
      */
     protected $stringData = '';
     /**
+     *Map data
+     *
      * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
      */
     private $mapData;
     /**
+     *Array data
+     *
      * Generated from protobuf field <code>repeated string arrayData = 3;</code>
      */
     private $arrayData;
@@ -33,8 +39,11 @@ class Data extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $stringData
+     *          String data
      *     @type array|\Google\Protobuf\Internal\MapField $mapData
+     *          Map data
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $arrayData
+     *          Array data
      * }
      */
     public function __construct($data = NULL) {
@@ -43,6 +52,8 @@ class Data extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *String data
+     *
      * Generated from protobuf field <code>string stringData = 1;</code>
      * @return string
      */
@@ -52,6 +63,8 @@ class Data extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *String data
+     *
      * Generated from protobuf field <code>string stringData = 1;</code>
      * @param string $var
      * @return $this
@@ -65,6 +78,8 @@ class Data extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Map data
+     *
      * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
@@ -74,6 +89,8 @@ class Data extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Map data
+     *
      * Generated from protobuf field <code>map<string, string> mapData = 2;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
@@ -87,6 +104,8 @@ class Data extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Array data
+     *
      * Generated from protobuf field <code>repeated string arrayData = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -96,6 +115,8 @@ class Data extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Array data
+     *
      * Generated from protobuf field <code>repeated string arrayData = 3;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this

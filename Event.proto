@@ -57,13 +57,13 @@ message Span {
 }
 
 message Data {
-  string stringData = 1;
-  map<string, string> mapData = 2;
-  repeated string arrayData = 3;
+  string stringData = 1; //String data
+  map<string, string> mapData = 2; //Map data
+  repeated string arrayData = 3; //Array data
 }
 
 message Context {
-  map<string, Data> data = 1;
+  map<string, Data> data = 1; //Context data
 }
 
 message RuntimeContext {

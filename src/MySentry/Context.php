@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class Context extends \Google\Protobuf\Internal\Message
 {
     /**
+     *Context data
+     *
      * Generated from protobuf field <code>map<string, .PhpSentryProtobuf.MySentry.Data> data = 1;</code>
      */
     private $data;
@@ -25,6 +27,7 @@ class Context extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array|\Google\Protobuf\Internal\MapField $data
+     *          Context data
      * }
      */
     public function __construct($data = NULL) {
@@ -33,6 +36,8 @@ class Context extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Context data
+     *
      * Generated from protobuf field <code>map<string, .PhpSentryProtobuf.MySentry.Data> data = 1;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
@@ -42,6 +47,8 @@ class Context extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Context data
+     *
      * Generated from protobuf field <code>map<string, .PhpSentryProtobuf.MySentry.Data> data = 1;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
